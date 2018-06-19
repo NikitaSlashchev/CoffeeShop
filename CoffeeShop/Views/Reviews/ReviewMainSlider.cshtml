@@ -1,0 +1,15 @@
+﻿@model IEnumerable<CoffeeShop.Models.Review>
+
+
+@foreach (var item in Model)
+{
+
+    <div class="review-item">
+        <i class="fas fa-user-astronaut review-icon"></i>
+            <p class="review-header">@Html.DisplayFor(modelItem => item.name)</p>
+            <p class="review-text">@Html.DisplayFor(modelItem => item.content)</p>
+    </div>
+
+}
+
+

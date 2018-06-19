@@ -1,0 +1,16 @@
+﻿@model IEnumerable<CoffeeShop.Models.Article>
+
+
+@foreach (var item in Model) {
+   
+    <div class="news-blog-item">
+       <img class="news-img" src="@Html.DisplayFor(modelItem => item.img)" alt="@Html.DisplayFor(modelItem => item.name)">
+            <p class="news-header">@Html.DisplayFor(modelItem => item.name)</p>
+            <p class="news-date">@String.Format("{0:d}",@item.creationDate)</p>
+            <p class="news-text">@Html.DisplayFor(modelItem => item.description)</p>
+            @Html.ActionLink("Read more", "DisplayItem", new { id = item.ID })
+    </div>
+
+}
+
+

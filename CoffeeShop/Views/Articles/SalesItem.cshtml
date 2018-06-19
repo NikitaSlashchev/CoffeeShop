@@ -1,0 +1,16 @@
+﻿@model IEnumerable<CoffeeShop.Models.Article>
+
+
+@foreach (var item in Model) {
+   
+    <div class="sales-item">
+       
+            <img class="sales-img" src="@Html.DisplayFor(modelItem => item.img)" alt="@Html.DisplayFor(modelItem => item.name)">
+        <p class="sales-header">@Html.DisplayFor(modelItem => item.name)</p>
+            @*@Html.ActionLink("Read more", "DisplayItem", new { id = item.ID })*@
+        <p class="sales-text">@Html.DisplayFor(modelItem => item.content)</p>
+    </div>
+
+}
+
+

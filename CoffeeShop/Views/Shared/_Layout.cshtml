@@ -1,0 +1,104 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>@ViewBag.Title – Кофейня от людей для людей</title>
+    @Styles.Render("~/Content/css")
+    @Styles.Render("~/Content/owl/css")
+    @Styles.Render("~/Content/common")
+    @Styles.Render("~/Content/fa")
+    @Scripts.Render("~/bundles/modernizr")
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i|Oswald:200,300,400,500,600,700&amp;subset=cyrillic" rel="stylesheet">
+    <script src="~/Content/main.js"></script>
+</head>
+<body>
+    <header class="main-header">
+        <a href="/" class="header-logo"><img class="header-logo-img" src="/Assets/img/logo.png" alt=""><span>coffeeshop</span></a>
+        <div class="header-contact">
+            <a href=""></a>
+                <p class="header-phone-number"><a href="callto:+375291978467">+375(29)197-84-67</a></p>
+                <a href="#map" class="header-link-map "><i class="far fa-compass"></i>Мы здесь</a>
+                <a href="/Home/Contact" class="header-link-contact">Свяжитесь с нами</a>
+           
+        </div>
+    </header>
+    <nav class="main-nav">
+        <ul class="main-menu">
+            @*<li>@Html.ActionLink("Домашняя страница", "Index", "Home")</li>*@
+            <li>@Html.ActionLink("О нас", "About", "Home")</li>
+            <li>@Html.ActionLink("Новости", "News", "Home")</li>
+            <li>@Html.ActionLink("Акции", "Sales", "Home")</li>
+            <li>@Html.ActionLink("Отзывы", "Review", "Home")</li>
+            <li>@Html.ActionLink("Блог", "Blog", "Home")</li>
+            <li>@Html.ActionLink("Контакт", "Contact", "Home")</li>
+        </ul>
+
+    </nav>     
+         
+    
+    @RenderBody()
+
+
+
+
+    <footer class="main-footer">
+        <div class="footer-block">
+            <ul class="footer-menu">
+                <li class="footer-menu-item">@Html.ActionLink("О нас", "About", "Home")</li>
+                <li class="footer-menu-item">@Html.ActionLink("Новости", "News", "Home")</li>
+                <li class="footer-menu-item">@Html.ActionLink("Акции", "Sales", "Home")</li>
+                <li class="footer-menu-item">@Html.ActionLink("Отзывы", "Review", "Home")</li>
+                <li class="footer-menu-item">@Html.ActionLink("Блог", "Blog", "Home")</li>
+                <li class="footer-menu-item">@Html.ActionLink("Контакт", "Contact", "Home")</li>
+                @*<li class="footer-menu-item">@Html.ActionLink("Админка", "Admin", "Home")</li>
+                <li><a href="#" id="admin">Админка</a></li>*@
+              
+            </ul>
+            <button onclick="adminAuth()" style="border-color: black;">Панель администратора</button>
+
+            <p id="demo"></p>
+
+
+        </div>
+        <div class="footer-block">
+            <p class="footer-info-phone"><span class="map-info-label"><i class="fas fa-phone"></i>Телефон: </span> <a href="tel:+375291978467">+375(29)197-84-67</a></p>
+            <p class="footer-info-adress"><span class="map-info-label"><i class="fas fa-map-marker"></i>Адрес: </span> Пл.Побелы 18</p>
+            <p class="footer-info-email"><span class="map-info-label"><i class="fas fa-envelope"></i>Email: </span><a href="mailto:info@mail.ru"> nikitaslashchev@gmail.com</a></p>
+            @Html.ActionLink("Связаться с нами", "Contact", "Home", new { @class = "footer-feedback-btn" })     
+        </div>
+        <div class="footer-block">
+            <p class="footer-header">Соц.сети
+            
+                <i class="fab fa-vk"></i>
+                <i class="fab fa-facebook"></i>
+                <i class="fab fa-twitter-square"></i>
+                <i class="fab fa-telegram"></i>
+            </p>
+            
+
+            @Html.ActionLink("Отзывы", "Review", "Home", new { @class = "footer-feedback-btn" })
+            <p class="footer-header">Способы оплаты
+            
+                <i class="fab fa-cc-visa"></i>
+                <i class="fab fa-cc-mastercard"></i>
+            
+            </p>
+            <div class="footer-copyright">
+                <p class="footer-copyright-text"></p>
+                <a href="https://t.me/Masleenya" class="footer-copyright-link"><i class="far fa-copyright"></i>Nikita Slashchev</a>
+            </div>
+        </div>
+        
+    </footer>
+   
+
+    @Scripts.Render("~/bundles/jquery")
+   <!--@Scripts.Render("~/bundles/bootstrap") --> 
+    @Scripts.Render("~/bundles/owl")
+    @Scripts.Render("~/bundles/common")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

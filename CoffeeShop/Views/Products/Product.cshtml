@@ -1,0 +1,21 @@
+﻿@model IEnumerable<CoffeeShop.Models.Product>
+
+
+@foreach (var item in Model)
+{
+
+    <div class="product-item">
+
+        <img class="product-img" src="@Html.DisplayFor(modelItem => item.img)" alt="@Html.DisplayFor(modelItem => item.name)">
+        <h1 class="product-header">@Html.DisplayFor(modelItem => item.name)</h1>
+        <p class="product-header">Country: @Html.DisplayFor(modelItem => item.country)</p>
+        <p class="product-header">Sort: @Html.DisplayFor(modelItem => item.sort)</p>
+        <p class="product-header">Brand: @Html.DisplayFor(modelItem => item.brand)</p>
+        <p class="product-header">Price: @Html.DisplayFor(modelItem => item.price)</p>
+        @*@Html.ActionLink("Read more", "DisplayItem", new { id = item.ID })*@
+        <p class="product-text">@Html.DisplayFor(modelItem => item.description)</p>
+    </div>
+
+}
+
+

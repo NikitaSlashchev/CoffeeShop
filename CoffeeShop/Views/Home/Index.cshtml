@@ -1,0 +1,65 @@
+﻿
+
+@{
+    ViewBag.Title = "CoffeeShop";
+}
+
+
+
+
+<section class="slider">
+    <div class="owl-carousel owl-theme main-slider">
+@{Html.RenderAction("DisplaySlide", "Sliders");}
+    </div>
+</section>
+<section class="cafe-menu">
+    <img src="~/Assets/img/hot-tea.png" />
+    <img src="~/Assets/img/cake.png" />
+    <img src="~/Assets/img/hamburger.png" />
+    <img src="~/Assets/img/lemonade.png" />
+    <img src="~/Assets/img/coffee-beans.png" />
+    @Html.ActionLink("Кофе", "Coffee", "Home")
+    @Html.ActionLink("Десерты", "Dessert", "Home")
+    @Html.ActionLink("Сэндвичи", "Sandwich", "Home")
+    @Html.ActionLink("Напитки", "Drinks", "Home")
+    @Html.ActionLink("Другое", "Other", "Home")
+   
+
+  
+</section>
+<section class="about">
+    <div class="about-block">
+        <header class="about-header">
+            <h1 class="main-h1">Lorem ipsum</h1>
+        </header>
+        <p class="about-text">
+            "We are a global management consulting firm that serves a broad mix of private, public and social sector institutions.
+            We help our clients make significant and lasting improvements to their performance and realize their most important goals.
+            With nearly a century of experience, we’ve built a firm uniquely equipped to this task."
+        </p>
+        <a href="/Home/About" class="about-more">Читать далее</a>
+    </div>
+</section>
+<section class="news">
+    <header class="news-h2">
+        <h2>Последние новости</h2><a href="/Home/News">Все новости</a>
+    </header>
+    <div class="owl-carousel owl-theme news-slider">
+        
+        @{Html.RenderAction("DisplayNews", "Articles");}
+       
+    </div>
+</section>
+<section class="main-map">
+
+    <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ad96675a31782685d3fab42876791e3d68baaee29876c86f0a7f40a8f370fe2c4&amp;width=100%25&amp;height=400&amp;lang=ru_RU&amp;scroll=true"></script>
+    <div class="map-info">
+        <a name="map"></a>
+            <div class="map-info-bg">
+                <h1>Приходите к нам!</h1>
+                <p class="map-info-phone"><span class="map-info-label">Телефон</span>:+88005553535</p>
+                <p class="map-info-adress"><span class="map-info-label">Адрес</span>:Пл.Побелы 18</p>
+                <img class="map-info-photo" src="~/Assets/img/cafeabout.jpg" alt="фото кофейни">
+            </div>    
+    </div>
+</section>

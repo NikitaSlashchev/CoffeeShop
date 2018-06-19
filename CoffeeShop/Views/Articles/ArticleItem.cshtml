@@ -1,0 +1,25 @@
+﻿@model CoffeeShop.Models.Article
+
+
+
+
+<div class="content-header" style="background-image:url(@Html.DisplayFor(model => model.img));">
+    <h1>@Html.DisplayFor(model => model.name)</h1>
+</div>
+
+<div class="article-content">
+    <div class="artice-inner-content">
+        <header class="article-header">
+            <h1>@Html.DisplayFor(model => model.name)</h1>
+        <address>@Html.DisplayFor(model => model.author)<i class="fas fa-circle"></i>
+            <time>@String.Format("{0:d}", Model.creationDate)</time>
+        </address>
+       
+        </header>
+        <article class="article-maintext">
+            <p>
+                @Html.DisplayFor(model => model.content)
+            </p>   
+        </article>
+    </div>
+</div>

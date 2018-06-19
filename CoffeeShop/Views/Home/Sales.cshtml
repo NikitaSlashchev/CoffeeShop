@@ -1,0 +1,14 @@
+﻿@{
+    ViewBag.Title = "Sales";
+}
+
+
+<div class="content-header">
+    <h1>@ViewBag.Title</h1>
+</div>
+
+<div class="inner-content">
+    @{Html.RenderAction("DisplaySales", "Articles");}
+</div>
+
+

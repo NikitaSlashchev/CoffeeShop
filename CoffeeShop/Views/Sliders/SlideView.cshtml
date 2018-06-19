@@ -1,0 +1,20 @@
+﻿@model IEnumerable<CoffeeShop.Models.Slider>
+
+
+@foreach (var item in Model)
+{
+
+        <div class="slider-item item">
+            
+            <img class="slider-img" src="@Html.DisplayFor(modelItem => item.img)" alt="">
+            <a href="@Html.DisplayFor(modelItem => item.pageSrc)" class="slider-link">
+                <p class="slider-header">@Html.DisplayFor(modelItem => item.title)</p>
+                <p class="slider-text">@Html.DisplayFor(modelItem => item.description)</p>
+            </a>
+        </div>
+      
+
+
+        }
+
+
